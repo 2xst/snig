@@ -38,7 +38,11 @@ end)
 
 null_ls.setup({
   sources = {
-    null_ls.builtins.formatting.nix_flake_fmt,
+    null_ls.builtins.formatting.nix_flake_fmt.with({
+      condition = function(_)
+        return vim.fs.root(".", "flake.nix") ~= nil
+      end,
+    }),
     null_ls.builtins.code_actions.gitsigns,
   },
 })
