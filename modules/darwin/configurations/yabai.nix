@@ -10,11 +10,11 @@
       auto_balance = "off";
       window_zoom_persist = "on";
       window_placement = "second_child";
-      top_padding = "15";
-      bottom_padding = "15";
-      left_padding = "15";
-      right_padding = "15";
-      window_gap = "10";
+      top_padding = "5";
+      bottom_padding = "5";
+      left_padding = "5";
+      right_padding = "5";
+      window_gap = "5";
       window_shadow = "off";
       window_opacity = "on";
       window_opacity_duration = "0.0";
