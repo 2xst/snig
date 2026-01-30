@@ -10,9 +10,14 @@
     baseIndex = 1;
     disableConfirmationPrompt = true;
     keyMode = "vi";
-    shortcut = "a";
     terminal = "tmux-256color";
     extraConfig = ''
+      # https://github.com/nix-community/home-manager/issues/7771
+      # shortcut = "a";
+      unbind C-b
+      set -g prefix C-a
+      bind -N "Send the prefix key through to the application" C-a send-prefix
+
       set -ogq @snig_session "#{session_name}"
 
       set -g renumber-windows on
