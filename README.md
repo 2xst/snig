@@ -2,11 +2,11 @@
 
 # Snig
 
-<a href="https://github.com/grimerssy/snig" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/2xst/snig" target="_blank" rel="noopener noreferrer">
   <picture>
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grimerssy/snig/main/assets/logo.svg">
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grimerssy/snig/main/assets/logo-white.svg">
-    <img src="https://raw.githubusercontent.com/grimerssy/snig/main/assets/logo.svg" width="100%" alt="logo">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/2xst/snig/main/assets/logo.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/2xst/snig/main/assets/logo-white.svg">
+    <img src="https://raw.githubusercontent.com/2xst/snig/main/assets/logo.svg" width="100%" alt="logo">
   </picture>
 </a>
 
