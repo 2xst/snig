@@ -7,7 +7,6 @@
   skhd = ./skhd.nix;
   sudo = ./sudo.nix;
   terminfo = ./terminfo.nix;
-  users = ./users.nix;
   yabai = ./yabai.nix;
   # keep-sorted end
 }
