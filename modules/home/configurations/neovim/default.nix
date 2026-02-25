@@ -62,6 +62,8 @@
 
       crates-nvim
 
+      typst-preview-nvim
+
       nvim-dap
       nvim-dap-ui
       nvim-dap-go
