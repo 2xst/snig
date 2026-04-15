@@ -30,7 +30,7 @@
     universalaccess.reduceMotion = true;
     NSGlobalDomain = {
       AppleEnableSwipeNavigateWithScrolls = false;
-      AppleICUForce24HourTime = false;
+      AppleICUForce24HourTime = true;
       AppleInterfaceStyle = "Dark";
       AppleMeasurementUnits = "Centimeters";
       AppleTemperatureUnit = "Celsius";
