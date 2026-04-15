@@ -5,9 +5,11 @@ local builtin = require("telescope.builtin")
 
 local map = vim.keymap.set
 
-map("n", "<leader>f", builtin.find_files)
 map("n", "<leader>g", builtin.live_grep)
 map("n", "<leader>h", builtin.diagnostics)
+map("n", "<leader>f", function()
+  builtin.find_files({ no_ignore = true })
+end)
 
 telescope.setup({
   defaults = vim.tbl_extend("force", themes.get_dropdown(), {
