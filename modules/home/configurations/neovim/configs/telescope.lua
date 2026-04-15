@@ -25,6 +25,7 @@ telescope.setup({
       },
     },
     file_ignore_patterns = {
+      ".DS_Store",
       ".git/",
       ".direnv/",
       "build/",
