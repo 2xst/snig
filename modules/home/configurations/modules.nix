@@ -5,6 +5,7 @@
   bat = ./bat.nix;
   bottom = ./bottom.nix;
   chrome = ./chrome.nix;
+  delta = ./delta.nix;
   direnv = ./direnv.nix;
   discord = ./discord.nix;
   docker = ./docker.nix;

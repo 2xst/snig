@@ -14,9 +14,9 @@
 
       tailwindcss-language-server
 
-      dockerfile-language-server-nodejs
+      dockerfile-language-server
 
-      nodePackages.bash-language-server
+      bash-language-server
 
       ccls
 
@@ -26,7 +26,7 @@
       gopls
       delve
 
-      nodePackages.typescript-language-server
+      typescript-language-server
 
       lua-language-server
 

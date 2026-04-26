@@ -2,12 +2,12 @@
 {
   programs.git = {
     enable = true;
-    delta.enable = true;
     signing = {
       key = null;
       signByDefault = true;
+      format = "openpgp";
     };
-    extraConfig = {
+    settings = {
       core.editor = "nvim";
       pull = {
         ff = "only";

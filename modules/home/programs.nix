@@ -9,7 +9,6 @@ with lib;
 
 let
   programs = [
-    "discord"
     "dust"
     "ffmpeg"
     "httpie"
