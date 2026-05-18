@@ -1,0 +1,47 @@
+require("catppuccin").setup({
+  flavour = "frappe",
+  transparent_background = true,
+  custom_highlights = function(colors)
+    return {
+      Macro = { fg = colors.sky },
+      StorageClass = { fg = colors.mauve },
+      Folded = { fg = colors.overlay0 },
+      CmpItemKindStruct = { link = "Type" },
+      CmpItemKindEnum = { link = "Type" },
+      CmpItemKindEnumMember = { link = "@lsp.type.enumMember" },
+      CmpItemKindInterface = { fg = colors.green },
+      ["@module"] = { fg = colors.lavender },
+      ["@type.builtin"] = { link = "Type" },
+      ["@function.builtin"] = { link = "Function" },
+      ["@function.macro"] = { link = "Macro" },
+      ["@lsp.typemod.macro.defaultLibrary"] = { link = "Macro" },
+      ["@lsp.type.builtinType"] = { link = "Type" },
+      ["@lsp.type.enumMember"] = { fg = colors.peach },
+      FFFSelectedActive = { link = "FFFSelected" },
+      FFFGitStaged = { link = "GitSignsAdd" },
+      FFFGitModified = { link = "GitSignsChange" },
+      FFFGitDeleted = { link = "GitSignsDelete" },
+      FFFGitRenamed = { fg = colors.mauve },
+      FFFGitUntracked = { link = "GitSignsAdd" },
+      FFFGitIgnored = { fg = colors.text },
+      FFFGitSignStaged = { link = "FFFGitStaged" },
+      FFFGitSignModified = { link = "FFFGitModified" },
+      FFFGitSignDeleted = { link = "FFFGitDeleted" },
+      FFFGitSignRenamed = { link = "FFFGitRenamed" },
+      FFFGitSignUntracked = { link = "FFFGitUntracked" },
+      FFFGitSignIgnored = { link = "FFFGitIgnored" },
+      FFFGitSignStagedSelected = { link = "FFFGitSignStaged" },
+      FFFGitSignModifiedSelected = { link = "FFFGitSignModified" },
+      FFFGitSignDeletedSelected = { link = "FFFGitSignDeleted" },
+      FFFGitSignRenamedSelected = { link = "FFFGitSignRenamed" },
+      FFFGitSignUntrackedSelected = { link = "FFFGitSignUntracked" },
+      FFFGitSignIgnoredSelected = { link = "FFFGitSignIgnored" },
+    }
+  end,
+  integrations = {
+    notify = true,
+    harpoon = true,
+  },
+})
+
+vim.api.nvim_command("colorscheme catppuccin")

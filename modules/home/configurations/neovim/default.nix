@@ -1,12 +1,15 @@
 { pkgs, ... }:
 {
-  home.file.".config/nvim/lua/configs".source = ./configs;
+  home.file.".config/nvim/lua".source = ../../../../nvim/lua;
+  home.file.".config/nvim/lsp".source = ../../../../nvim/lsp;
+  home.file.".config/nvim/snippets".source = ../../../../nvim/snippets;
   programs.neovim = {
     enable = true;
     defaultEditor = true;
     extraConfig = "lua require('configs')";
     extraPackages = with pkgs; [
       ripgrep
+      jq
 
       tree-sitter
 
@@ -34,49 +37,36 @@
       rust-analyzer
     ];
     plugins = with pkgs.vimPlugins; [
-      oil-nvim
-
-      plenary-nvim
-      telescope-nvim
-
-      harpoon
-
-      gitsigns-nvim
+      netrw-nvim
 
       nvim-treesitter.withAllGrammars
       nvim-ts-context-commentstring
 
+      fff-nvim
+
       comment-nvim
 
-      nvim-cmp
-      cmp-buffer
-      cmp-path
-      cmp_luasnip
-      cmp-nvim-lsp
-      cmp-nvim-lua
-      lspkind-nvim
+      gitsigns-nvim
 
-      lsp-zero-nvim
+      blink-cmp
+
+      friendly-snippets
+
       nvim-lspconfig
       none-ls-nvim
-
-      crates-nvim
-
-      typst-preview-nvim
 
       nvim-dap
       nvim-dap-ui
       nvim-dap-go
 
-      luasnip
-      friendly-snippets
+      crates-nvim
 
-      catppuccin-nvim
-      lualine-nvim
-      dressing-nvim
-      nvim-notify
-      nvim-scrollbar
+      typst-preview-nvim
+
       nvim-web-devicons
+      lualine-nvim
+      catppuccin-nvim
+      nvim-scrollbar
     ];
   };
 }

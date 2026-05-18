@@ -1,0 +1,40 @@
+{
+  "tests": {
+    "prefix": "tests",
+    "body": [
+      "#[cfg(test)]",
+      "mod tests {",
+      "    use super::*;",
+      "",
+      "    ${1}",
+      "}"
+    ]
+  },
+  "tokio-main": {
+    "prefix": "tokio-main",
+    "body": [
+      "#[tokio::main]",
+      "async fn main() {",
+      "    ${1:unimplemented!()}",
+      "}"
+    ]
+  },
+  "tokio-test": {
+    "prefix": "tokio-test",
+    "body": [
+      "#[tokio::test]",
+      "async fn ${1:name}() {",
+      "    ${2:unimplemented!()}",
+      "}"
+    ]
+  },
+  "sqlx-test": {
+    "prefix": "sqlx-test",
+    "body": [
+      "#[sqlx::test]",
+      "async fn ${1:name}(${2:db}: ${3:DbType}) {",
+      "    ${4:unimplemented!()}",
+      "}"
+    ]
+  }
+}
