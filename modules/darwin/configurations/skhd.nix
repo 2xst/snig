@@ -49,7 +49,15 @@
             [
               hyper
               "s"
-              "${yabai} -m window --toggle sticky"
+              (
+                let
+                  scratchpad_cmd = "${yabai} -m window --scratchpad";
+                in
+                ''
+                  ${scratchpad_cmd} || \
+                  ${scratchpad_cmd} $(${yabai} -m query --windows --window | ${jq} -r '"sticky\(.id)"')
+                ''
+              )
             ]
             [
               hyper
