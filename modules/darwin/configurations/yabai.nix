@@ -19,7 +19,7 @@
       window_opacity = "on";
       window_opacity_duration = "0.0";
       active_window_opacity = "1.0";
-      normal_window_opacity = "0.8";
+      normal_window_opacity = "1.0";
       mouse_drop_action = "swap";
       mouse_modifier = "shift";
       mouse_action1 = "move";
