@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-  system.keyboard = {
-    enableKeyMapping = true;
-    remapCapsLockToRightControl = true;
-  };
   services.skhd =
     let
       package = pkgs.skhd;
@@ -11,7 +7,7 @@
     {
       inherit package;
       enable = true;
-      skhdConfig =
+      config =
         let
           hyper = [ "rctrl" ];
 
