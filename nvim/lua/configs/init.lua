@@ -1,5 +1,3 @@
-require("configs.loader")
-
 require("configs.settings")
 require("configs.keymaps")
 require("configs.folds")
