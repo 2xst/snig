@@ -5,7 +5,10 @@
     settings = {
       terminal.shell.program = "${pkgs.fish}/bin/fish";
       font.normal.family = "JetBrainsMono Nerd Font";
-      window.decorations = "none";
+      window = {
+        decorations = "none";
+        option_as_alt = "both";
+      };
     };
   };
 }
