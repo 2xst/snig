@@ -27,11 +27,14 @@
   ripgrep = ./ripgrep.nix;
   scripts = ./scripts.nix;
   shell-aliases = ./shell-aliases.nix;
+  skhd = ./skhd.nix;
+  ssh = ./ssh.nix;
   starship = ./starship.nix;
   stats = ./stats.nix;
   telegram = ./telegram.nix;
   tldr = ./tldr.nix;
   tmux = ./tmux.nix;
+  yabai = ./yabai.nix;
   yt-dlp = ./yt-dlp.nix;
   zoxide = ./zoxide.nix;
   zsh = ./zsh.nix;

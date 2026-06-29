@@ -11,7 +11,7 @@ let
 
   restart-de =
     let
-      launchAgent = service: "$HOME/Library/LaunchAgents/org.nixos.${service}.plist";
+      launchAgent = service: "$HOME/Library/LaunchAgents/org.nix-community.home.${service}.plist";
       yabai = launchAgent "yabai";
       skhd = launchAgent "skhd";
     in
