@@ -14,15 +14,22 @@ end, { desc = "Open Netrw" })
 require("netrw").setup({ use_devicons = true })
 
 -- TODO remove 26.11 https://github.com/prichrd/netrw.nvim/pull/44/changes
+local function render_netrw_icons()
+  vim.schedule(function()
+    local bufnr = vim.api.nvim_get_current_buf()
+    if vim.bo[bufnr].filetype == "netrw" then
+      require("netrw.ui").embelish(bufnr)
+      require("netrw.actions").bind(bufnr)
+    end
+  end)
+end
+
 vim.api.nvim_create_autocmd("FocusGained", {
   pattern = "*",
-  callback = function()
-    vim.schedule(function()
-      local bufnr = vim.api.nvim_get_current_buf()
-      if vim.bo[bufnr].filetype == "netrw" then
-        require("netrw.ui").embelish(bufnr)
-        require("netrw.actions").bind(bufnr)
-      end
-    end)
-  end,
+  callback = render_netrw_icons,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "netrw",
+  callback = render_netrw_icons,
 })
