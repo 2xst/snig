@@ -13,7 +13,7 @@ end, { desc = "Open Netrw" })
 
 require("netrw").setup({ use_devicons = true })
 
--- TODO remove 26.11 https://github.com/prichrd/netrw.nvim/pull/44/changes
+-- TODO remove 26.11 https://github.com/prichrd/netrw.nvim/pull/43
 local function render_netrw_icons()
   vim.schedule(function()
     local bufnr = vim.api.nvim_get_current_buf()
